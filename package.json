@@ -1,0 +1,31 @@
+{
+    "name": "@simon-robertson-online/reactive-react",
+    "version": "0.0.1",
+    "description": "",
+    "repository": "https://github.com/simon-robertson-shift/reactive-react.git",
+    "contributors": [
+        {
+            "name": "Simon Robertson"
+        }
+    ],
+    "main": "index.js",
+    "files": [
+        "/index.d.ts",
+        "/index.js"
+    ],
+    "scripts": {
+        "build": "tsc"
+    },
+    "dependencies": {
+        "@simon-robertson-online/reactive": "^0.0.2",
+        "react": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.14",
+        "@typescript-eslint/eslint-plugin": "^5.60.1",
+        "@typescript-eslint/parser": "^5.60.1",
+        "eslint": "^8.43.0",
+        "prettier": "^2.8.8",
+        "typescript": "^5.1.6"
+    }
+}
