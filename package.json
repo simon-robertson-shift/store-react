@@ -17,7 +17,7 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@simon-robertson-online/reactive": "^0.0.2",
+        "@simon-robertson-online/reactive": "^0.0.3",
         "react": "^18.2.0"
     },
     "devDependencies": {
