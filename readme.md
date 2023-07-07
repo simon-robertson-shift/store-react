@@ -6,7 +6,7 @@ This package extends [reactive](https://github.com/simon-robertson-shift/reactiv
 
 A package for Vue will be available shortly.
 
-For now, take a look at [reactive-react-demo](https://github.com/simon-robertson-shift/reactive-react) for a working NextJS demonstration.
+For now, take a look at [reactive-react-demo](https://github.com/simon-robertson-shift/reactive-react-demo) for a working NextJS demonstration.
 
 ### installation
 
