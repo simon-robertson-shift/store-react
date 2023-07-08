@@ -1,7 +1,6 @@
 import type { Store, StoreActions, StoreState, StoreStateReceiver, StoreStateSelector } from '@nomemo/store/types'
 import { useEffect, useState } from 'react'
 
-/** */
 export const useStoreState = <S extends StoreState, T>(
     store: Store<StoreActions, S>,
     selector: StoreStateSelector<S, T>
@@ -18,7 +17,7 @@ export const useStoreState = <S extends StoreState, T>(
         return () => {
             store.disconnect(receiver)
         }
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     return value
 }
