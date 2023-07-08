@@ -1,29 +1,22 @@
-import type {
-    Reactive,
-    ReactiveActions,
-    ReactiveState,
-    ReactiveStateReceiver,
-    ReactiveStateSelector
-} from '@nomemo/store/types'
-
+import type { Store, StoreActions, StoreState, StoreStateReceiver, StoreStateSelector } from '@nomemo/store/types'
 import { useEffect, useState } from 'react'
 
 /** */
-export const useReactiveState = <S extends ReactiveState, T>(
-    reactive: Reactive<ReactiveActions, S>,
-    selector: ReactiveStateSelector<S, T>
+export const useStoreState = <S extends StoreState, T>(
+    store: Store<StoreActions, S>,
+    selector: StoreStateSelector<S, T>
 ): T => {
-    const [value, setValue] = useState(() => selector(reactive.getState()))
+    const [value, setValue] = useState(() => selector(store.getState()))
 
     useEffect(() => {
-        const receiver: ReactiveStateReceiver<S> = (state) => {
+        const receiver: StoreStateReceiver<S> = (state) => {
             setValue(selector(state))
         }
 
-        reactive.connect(receiver)
+        store.connect(receiver)
 
         return () => {
-            reactive.disconnect(receiver)
+            store.disconnect(receiver)
         }
     }, [])
 
