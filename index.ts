@@ -4,7 +4,7 @@ import type {
     ReactiveState,
     ReactiveStateReceiver,
     ReactiveStateSelector
-} from '@nomemo/reactive/types'
+} from '@nomemo/store/types'
 
 import { useEffect, useState } from 'react'
 
