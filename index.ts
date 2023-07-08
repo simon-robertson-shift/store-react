@@ -4,7 +4,7 @@ import type {
     ReactiveState,
     ReactiveStateReceiver,
     ReactiveStateSelector
-} from '@simon-robertson-online/reactive/types'
+} from '@nomemo/reactive/types'
 
 import { useEffect, useState } from 'react'
 
